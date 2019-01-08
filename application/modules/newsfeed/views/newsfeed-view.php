@@ -1,8 +1,21 @@
-<div class="cover_pic"></div>
-  <div class="dp"></div>
-  <!--<label id="user_name"><a href="profile.html" id="user_name_color">Abhay Gupta</a></label>-->
-  <div class="main">
-        <div class="col-3">
+<div class="cover_pic">
+      <div class="div">
+      <div class="dp"></div>
+      <label id="user_name"><a href="profile.html" id="user_name_color">Abhay Gupta</a></label>
+      <!-- Static navbar -->
+      <nav class="navbar navbar-default" id="nav-2">
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-left">
+              <li class="li"><a href="profile.html"><i class="fa fa-heartbeat" id="icn"></i></a></li>
+              <li class="li"><a href="about.html"><i class="fa fa-user" id="icn"></i></a></li>
+              <li class="li"><a href="training.html"><i class="fa fa-group" id="icn"></i></a></li>
+              <li class="li"><a href="training.html"><i class="fa fa-image" id="icn"></i></a></li>
+              <li class="li"><a href="training.html"><i class="fa fa-cog" id="icn"></i></a></a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+      </nav>
+      <div class="container-fluid">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
           <div class="row">
             <div class="intro">
               <i class="fa fa-user" id="intro"></i><label id="name">Intro</label><br>
@@ -38,7 +51,7 @@
             </div>
           </div>
         </div>
-        <div class="col-5">
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
           <div class="row">
             <div class="compose"></div>
             <div class="post">
@@ -75,18 +88,6 @@
             </div>
           </div>
         </div>
-       <div col-2>
-        	<div class="chat">
-        		chat
-        	</div>
-        </div>
       </div>
     </div>
     </div>
-
-
-
-
-
-
-

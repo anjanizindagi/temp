@@ -5,7 +5,12 @@
 	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width,intial-scale=1">
   	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/bindass.css">
-	<title>newsfeed</title>
+  	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/bootstrap.min.css">
+  	<script type="text/javascript" src="<?php echo base_url(); ?>profile.js"></script>
+  	<script type="text/javascript" src="<?php echo base_url(); ?>js/jquery.min.js"></script>
+  	<script type="text/javascript" src="<?php echo base_url(); ?>js/bootstrap.min.js"></script>
+  	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  	<script type="text/javascript" src="<?php echo base_url(); ?>js/jquery.vide.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	
 	
@@ -22,7 +27,3 @@
 	<!-- body division stops -->
 
 	<!-- ============================================= -->
-
-	
-</body>
-</html>
