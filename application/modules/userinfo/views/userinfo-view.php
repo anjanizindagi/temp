@@ -7,15 +7,15 @@
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-left">
               <li class="li"><a href="profile.html"><i class="fa fa-heartbeat" id="icn"></i></a></li>
-              <li class="li"><a href="about.html"><i class="fa fa-user" id="icn"></i></a></li>
+              <li class="li"><a href="#"><i class="fa fa-user" id="icn"></i></a></li>
               <li class="li"><a href="training.html"><i class="fa fa-group" id="icn"></i></a></li>
               <li class="li"><a href="training.html"><i class="fa fa-image" id="icn"></i></a></li>
               <li class="li"><a href="training.html"><i class="fa fa-cog" id="icn"></i></a></a></li>
             </ul>
           </div><!--/.nav-collapse -->
       </nav>
-      <div class="container-fluid">
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+  <div class="container-fluid">
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
           <div class="row">
             <div class="intro">
               <i class="fa fa-user" id="intro"></i><label id="name">Intro</label><br>
@@ -52,42 +52,66 @@
           </div>
         </div>
         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-          <div class="row">
-            <div class="compose"></div>
-            <div class="post">
-              <div class="poto"></div><label id="person">Anjali Gupta</label><br>
-              <label id="date">17 Aug at 05:26 pm</label>
-              <div class="area"></div>
-              <i class="fa fa-thumbs-up" id="like"></i>
-              <i class="fa fa-comments" id="comment"></i>
-              <i class="fa fa-share" id="share"></i>
-            </div>
-            <div class="post">
-              <div class="poto"></div><label id="person">Ayushi Rawat</label><br>
-              <label id="date">17 Aug at 05:26 pm</label>
-              <div class="area1"></div>
-              <i class="fa fa-thumbs-up" id="like"></i>
-              <i class="fa fa-comments" id="comment"></i>
-              <i class="fa fa-share" id="share"></i>
-            </div>
-            <div class="post">
-              <div class="poto"></div><label id="person">Megha Singh</label><br>
-              <label id="date">17 Aug at 05:26 pm</label>
-              <div class="area2"></div>
-              <i class="fa fa-thumbs-up" id="like"></i>
-              <i class="fa fa-comments" id="comment"></i>
-              <i class="fa fa-share" id="share"></i>
-            </div>
-            <div class="post">
-              <div class="poto"></div><label id="person">Pooja Yadav</label><br>
-              <label id="date">17 Aug at 05:26 pm</label>
-              <div class="area3"></div>
-              <i class="fa fa-thumbs-up" id="like"></i>
-              <i class="fa fa-comments" id="comment"></i>
-              <i class="fa fa-share" id="share"></i>
-            </div>
-          </div>
-        </div>
+     <div id="signupform">
+    <form method="post" action=" ">
+      <h1>DESCRIBE YOURSELF...</h1>
+      <form method="post" action=" ">
+      <div class="form-input">
+            <input type="text" name="name" required=""><br>
+            <label id="z">City</label>
       </div>
+      <div class="form-input">
+            <input type="text" name="name" required=""><br>
+            <label id="z">State</label>
+      </div>
+      <div class="form-input">
+            <input type="text" name="name" required=""><br>
+            <label id="z">Country</label>
+      </div>  
+      <div class="form-input">
+            <input type="text" name="name" required=""><br>
+            <label id="z">High School</label>
+      </div>
+      <div class="form-input">
+            <input type="text" name="name" required=""><br>
+            <label id="z">College</label>
+      </div>
+      <div class="form-input">
+            <input type="text" name="name" required=""><br>
+            <label id="z">University</label>
+      </div>
+      <div class="form-input">
+            <input type="text" name="name" required=""><br>
+            <label id="z">About Me</label>
+      </div>
+      <div class="form-input">
+            <input type="text" name="name" required=""><br>
+            <label id="z">Social View</label>
+      </div>
+      <div class="form-input">
+            <input type="text" name="name" required=""><br>
+            <label id="z">Political view</label>
+      </div>
+      <div class="form-input">
+            <input type="text" name="name" required=""><br>
+            <label id="z">Hobby</label>
+      </div>
+      <div class="form-input">
+            <input type="text" name="name" required=""><br>
+            <label id="z">Interests</label>
+      </div>
+      <div class="form-input">
+            <input type="text" name="name" required=""><br>
+            <label id="z">Skills</label>
+      </div>
+      <div class="form-input">
+            <input type="text" name="name" required=""><br>
+            <label id="z">Work Profile</label>
+      </div>
+      <button>SUBMIT</button>
+    </form>
     </div>
-    </div>
+  </div>
+  </div>
+
+

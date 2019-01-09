@@ -240,3 +240,59 @@ nav.black ul li a{
 #person{
 	color: #0C396B;	
 }
+#signupform h1{
+	font-family: arial;
+	font-size: 25px;
+	color: #0C396B;
+}
+.form-input input{
+	height: 40px;
+	width: 300px;
+	border: 0px;
+	outline: none;
+	border-bottom: 1px solid black;
+	margin: 5px;
+	position: relative;
+}
+.form-input #z{
+	margin: 5px;
+	position: absolute;
+	top: 15px;
+	pointer-events: none;
+	left: 0;
+	color: #2d2d2d;
+	transition: all .5s ease;
+}
+.form-input{
+	position: relative;
+}
+.form-input input:focus ~ #z,
+.form-input input:valid ~ #z{
+	top: -13px;
+	left: 0;
+	color: #0C396B;
+	font-size: 20px;
+	font-weight: bold;
+}
+#signupform button{             
+	height: 35px;
+	width: 130px;
+	background: #0C396B;
+	font-family: monospace;
+	font-size: 16px;
+	color: white;
+	border: none;
+	outline: none;
+	margin-top: 30px;
+	margin-left: 175px;
+}
+#signupform{
+	position: absolute;
+	margin-top: 69vh;
+	left: 30%;
+	transform: translate(-50%,-50%);
+	z-index: 999;
+	background: #fff;
+	box-shadow: 0px 8px 10px #333;
+	padding: 10%;
+}

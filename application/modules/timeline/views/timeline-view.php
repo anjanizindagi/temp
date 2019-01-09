@@ -38,7 +38,7 @@
                 </tr>
                 <tr>
                   <td><i class="fa fa-plus-square" id="f"></i></td>
-                  <td><a href="#" id="e">Add features</a></td>
+                  <td><a href="<?php echo base_url(); ?>template/userinfo" id="e">Add features</a></td>
                 </tr>
               </table>
               <center><input type="text" name="links" id="link" placeholder="+ Add instagram, Websites and other links"></center>

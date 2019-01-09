@@ -48,4 +48,10 @@ class Template extends MX_Controller{
 	}//end of setting function
 
 
+	public function userinfo()
+	{
+		$data = array('module_name' => 'userinfo');
+		$this->load->view('template-view', $data);
+	}//end of userinfo function
+
 }//end of class
