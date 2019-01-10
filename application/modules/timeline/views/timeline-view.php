@@ -1,4 +1,5 @@
 <div class="cover_pic">
+  <button id="add">ADD FRIEND</button>
       <div class="div">
       <div class="dp"></div>
      <label id="user_name"><a href="profile.html" id="user_name_color">Abhay Gupta</a></label>

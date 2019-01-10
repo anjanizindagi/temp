@@ -55,7 +55,7 @@
      <div id="signupform">
     <form id="userform">
       <h1>DESCRIBE YOURSELF...</h1>
-      <form method="post" action=" ">
+     
       <div class="form-input">
             <input type="text" name="city" required=""><br>
             <label id="z">City</label>

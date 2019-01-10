@@ -8,7 +8,7 @@ $(document).ready(function(){
 
 				     $.ajax({
 				            type:'POST',
-				            url:'userinfo/userinfo_data',
+				            url:'http://localhost/bindassbuddy/userinfo/userinfo_data',
 				            data:form_data,
 				            dataType:'json', 
 				           
