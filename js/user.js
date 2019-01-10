@@ -9,7 +9,7 @@ $(document).ready(function(){
 				     $.ajax({
 				            type:'POST',
 				            url:'user_info/userinfo_data',
-				            data: userinfo_data,
+				            data:userinfo_data,
 				            dataType:'json', 
 				           
 				        })
