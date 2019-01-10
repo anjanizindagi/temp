@@ -2,16 +2,10 @@
 
 class Userinfo_model extends CI_Model
 {
+		function userdetails($data){
+			$this->db->insert('user_info', $data);
+		
+		}//end of userdetails function
 	
-	function save_data($modal_data){
 
-		$result = $this->db->insert('user_info', $modal_data);
-
-		if ($result) {
-			return true;
-		}else{
-			return false;
-		}
-
-	}//end of function 
-}  
+}

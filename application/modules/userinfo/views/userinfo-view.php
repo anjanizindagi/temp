@@ -53,7 +53,7 @@
         </div>
         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
      <div id="signupform">
-    <form id="userform">
+    <form method="post" action="<?php echo base_url(); ?>userinfo/userdetails">
       <h1>DESCRIBE YOURSELF...</h1>
      
       <div class="form-input">
@@ -105,13 +105,13 @@
             <label id="z">Skills</label>
       </div>
       <div class="form-input">
-            <input type="text" name="work_profile" required=""><br>
+            <input type="text" name="working_profile" required=""><br>
             <label id="z">Work Profile</label>
       </div>
-      <button type="button" id="user_btn">SUBMIT</button>
+      <button type="submit">SUBMIT</button>
     </form>
     </div>
   </div>
   </div>
-<script type="text/javascript" src="<?php echo base_url();?>js/user.js"></script>
+
 
