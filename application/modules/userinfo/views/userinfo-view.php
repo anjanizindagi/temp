@@ -36,10 +36,10 @@
                   <td><i class="fa fa-heart" id="a"></i></td>
                   <td><label class="a">Joined on May 2015</label></td>
                 </tr>
-              <!--  <tr>
+                <tr>
                   <td><i class="fa fa-plus-square" id="f"></i></td>
                  <td><a href="<?php echo base_url(); ?>template/userinfo" id="e">Add features</a></td>
-                </tr> -->
+                </tr>
               </table>
               <center><input type="text" name="links" id="link" placeholder="+ Add instagram, Websites and other links"></center>
             </div>
@@ -53,65 +53,65 @@
         </div>
         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
      <div id="signupform">
-    <form method="post" action=" ">
+    <form id="userform">
       <h1>DESCRIBE YOURSELF...</h1>
       <form method="post" action=" ">
       <div class="form-input">
-            <input type="text" name="name" required=""><br>
+            <input type="text" name="city" required=""><br>
             <label id="z">City</label>
       </div>
       <div class="form-input">
-            <input type="text" name="name" required=""><br>
+            <input type="text" name="state" required=""><br>
             <label id="z">State</label>
       </div>
       <div class="form-input">
-            <input type="text" name="name" required=""><br>
+            <input type="text" name="country" required=""><br>
             <label id="z">Country</label>
       </div>  
       <div class="form-input">
-            <input type="text" name="name" required=""><br>
+            <input type="text" name="highschool" required=""><br>
             <label id="z">High School</label>
       </div>
       <div class="form-input">
-            <input type="text" name="name" required=""><br>
+            <input type="text" name="college" required=""><br>
             <label id="z">College</label>
       </div>
       <div class="form-input">
-            <input type="text" name="name" required=""><br>
+            <input type="text" name="university" required=""><br>
             <label id="z">University</label>
       </div>
       <div class="form-input">
-            <input type="text" name="name" required=""><br>
+            <input type="text" name="about_me" required=""><br>
             <label id="z">About Me</label>
       </div>
       <div class="form-input">
-            <input type="text" name="name" required=""><br>
+            <input type="text" name="social_view" required=""><br>
             <label id="z">Social View</label>
       </div>
       <div class="form-input">
-            <input type="text" name="name" required=""><br>
+            <input type="text" name="political_view" required=""><br>
             <label id="z">Political view</label>
       </div>
       <div class="form-input">
-            <input type="text" name="name" required=""><br>
+            <input type="text" name="hobby" required=""><br>
             <label id="z">Hobby</label>
       </div>
       <div class="form-input">
-            <input type="text" name="name" required=""><br>
+            <input type="text" name="interests" required=""><br>
             <label id="z">Interests</label>
       </div>
       <div class="form-input">
-            <input type="text" name="name" required=""><br>
+            <input type="text" name="skills" required=""><br>
             <label id="z">Skills</label>
       </div>
       <div class="form-input">
-            <input type="text" name="name" required=""><br>
+            <input type="text" name="work_profile" required=""><br>
             <label id="z">Work Profile</label>
       </div>
-      <button>SUBMIT</button>
+      <button type="button" id="user_btn">SUBMIT</button>
     </form>
     </div>
   </div>
   </div>
-
+<script type="text/javascript" src="<?php echo base_url();?>js/user.js"></script>
 

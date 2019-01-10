@@ -6,7 +6,6 @@
   	<meta name="viewport" content="width=device-width,intial-scale=1">
   	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/bindass.css">
   	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/bootstrap.min.css">
-  	<script type="text/javascript" src="<?php echo base_url(); ?>profile.js"></script>
   	<script type="text/javascript" src="<?php echo base_url(); ?>js/jquery.min.js"></script>
   	<script type="text/javascript" src="<?php echo base_url(); ?>js/bootstrap.min.js"></script>
   	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
