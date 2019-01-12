@@ -1,8 +1,11 @@
+<!---<?php
+ // header("Location:timeline-view.php?id=" . $_SESSION['user_id']);
+?>-->
 <div class="cover_pic">
   <button id="add">ADD FRIEND</button>
       <div class="div">
       <div class="dp"></div>
-     <label id="user_name"><a href="profile.html" id="user_name_color">Abhay Gupta</a></label>
+     <label id="user_name"><a href="profile.html" id="user_name_color"><?php echo "<tr>".$data['name']."</tr>" ?></a></label>
       <!-- Static navbar -->
       <nav class="navbar navbar-default" id="nav-2">
           <div id="navbar" class="navbar-collapse collapse">

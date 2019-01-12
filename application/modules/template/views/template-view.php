@@ -16,7 +16,13 @@
 </head>
 <body>
 	<!-- navigation bar starts -->
-	<?php $this->load->view('nav-view'); ?>
+	<?php 
+	$user_id = $this->session->userdata("session_data");
+	$user_id = $this->session->userdata['sessiondata']['user_id'];
+	$this->load->model('Template_model');
+	$result['ddata']=$this->Template_model->display_records($user_id);
+	$this->load->view('nav-view',$result); 
+	?>
 	<!-- navigation bar stop -->
 
 	<!-- ============================================= -->

@@ -4,7 +4,7 @@
   </div>
   <ul>
     <li><a href='<?php echo base_url(); ?>template'>home</a></li>
-    <li><a href='<?php echo base_url(); ?>template/timeline'>profile</a></li>
+    <li><a href='<?php echo base_url(); ?>template/timeline'><?php echo "<tr>".$ddata['name']."</tr>" ?></a></li>
     <li><a href='<?php echo base_url(); ?>template/notification'>notification</a></li>
     <li><a href='<?php echo base_url(); ?>template/setting'>setting</a></li>
     <li><a href='<?php echo base_url(); ?>login'>logout</a></li>
