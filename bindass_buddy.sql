@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 07, 2019 at 06:11 PM
+-- Generation Time: Jan 11, 2019 at 03:07 PM
 -- Server version: 5.7.21-1ubuntu1
 -- PHP Version: 7.2.3-1ubuntu1
 
@@ -30,7 +30,7 @@ CREATE TABLE `images` (
   `image_id` varchar(255) NOT NULL,
   `user_id` varchar(255) NOT NULL,
   `image_name` varchar(50) NOT NULL,
-  `path` varchar(255) NOT NULL,
+  `path` varchar(200) NOT NULL,
   `file_name` varchar(100) NOT NULL,
   `upload_time` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -74,15 +74,28 @@ INSERT INTO `users` (`user_id`, `name`, `dob`, `gender`, `phone`, `email`, `pass
 
 CREATE TABLE `user_info` (
   `user_info_id` varchar(255) NOT NULL,
+  `user_id` varchar(225) NOT NULL,
   `city` varchar(255) NOT NULL,
   `state` varchar(255) NOT NULL,
   `country` varchar(255) NOT NULL,
   `highschool` varchar(255) NOT NULL,
-  `intermediate` varchar(255) NOT NULL,
+  `university` varchar(255) NOT NULL,
   `college` varchar(255) NOT NULL,
   `working_profile` varchar(255) NOT NULL,
-  `about_me` varchar(255) NOT NULL
+  `about_me` varchar(255) NOT NULL,
+  `skills` varchar(225) NOT NULL,
+  `interests` varchar(225) NOT NULL,
+  `hobby` varchar(225) NOT NULL,
+  `social_view` varchar(225) NOT NULL,
+  `political_view` varchar(225) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user_info`
+--
+
+INSERT INTO `user_info` (`user_info_id`, `user_id`, `city`, `state`, `country`, `highschool`, `university`, `college`, `working_profile`, `about_me`, `skills`, `interests`, `hobby`, `social_view`, `political_view`) VALUES
+('5c371ffa14637', 'd9dfd780329256e70669d7e983e6f63521b1f542', 'hcddcbhfdxh', 'a', 'a', 'a', 'a', 'aa', 'a', 'a', 'aa', 'a', 'a', 'a', 'aa');
 
 --
 -- Indexes for dumped tables
