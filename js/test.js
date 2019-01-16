@@ -1,9 +1,9 @@
 $(document).ready(function(){
 
-	$('#bt_myform').click(function(){
+	$('#btn').click(function(){
 
 
-			var form_data = JSON.stringify($('#myform').serializeArray(this));
+			var form_data = JSON.stringify($('#form').serializeArray(this));
 
 
 				     $.ajax({

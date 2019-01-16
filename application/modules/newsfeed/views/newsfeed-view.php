@@ -1,7 +1,8 @@
+  
 <div class="cover_pic">
       <div class="div">
       <div class="dp"></div>
-      <label id="user_name"><a href="profile.html" id="user_name_color"><?php echo "<tr>".$data['name']."</tr>" ?></a></label>
+    <label id="user_name"><a href="profile.html" id="user_name_color"><?php echo "<tr>".$loggedname."</tr>" ?></a></label>  
       <!-- Static navbar -->
       <nav class="navbar navbar-default" id="nav-2">
           <div id="navbar" class="navbar-collapse collapse">
@@ -22,72 +23,64 @@
               <table>
                 <tr>
                   <td><i class="fa fa-briefcase" id="a"></i></td>
-                  <td><label class="a">student</label></td>
+                  <td><label class="a"><?php echo $info['working_profile'] ?></label></td>
                 </tr>
                 <tr>
                   <td><i class="fa fa-briefcase" id="a"></i></td>
-                  <td><label class="a">Work at Not Yet Working Still Studying</label></td>
+                  <td><label class="a"><?php echo $info['college'] ?></label></td>
                 </tr>
                 <tr>
                   <td><i class="fa fa-graduation-cap" id="a"></i></td>
-                  <td><label class="a">Went to Nav Jeevan Mission School</label></td>
+                  <td><label class="a"><?php echo $info['highschool'] ?></label></td>
                 </tr>
                 <tr>
                   <td><i class="fa fa-heart" id="a"></i></td>
-                  <td><label class="a">Joined on May 2015</label></td>
+                  <td><label class="a">Joined on <?php echo $data['created_date'] ?></label></td>
                 </tr>
-              <!--  <tr>
-                  <td><i class="fa fa-plus-square" id="f"></i></td>
-                 <td><a href="<?php echo base_url(); ?>template/userinfo" id="e">Add features</a></td>
-                </tr> -->
               </table>
               <center><input type="text" name="links" id="link" placeholder="+ Add instagram, Websites and other links"></center>
             </div>
-            <div class="photos">
-               <i class="fa fa-image" id="intro"></i><label id="name">Gallery</label><br>
-            </div>
-            <div class="friends">
-              <i class="fa fa-group" id="intro"></i><label id="name">Buddies</label><br>
-            </div>
           </div>
         </div>
-        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+       <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
           <div class="row">
-            <div class="compose"></div>
-            <div class="post">
-              <div class="poto"></div><label id="person">Anjali Gupta</label><br>
-              <label id="date">17 Aug at 05:26 pm</label>
-              <div class="area"></div>
-              <i class="fa fa-thumbs-up" id="like"></i>
-              <i class="fa fa-comments" id="comment"></i>
-              <i class="fa fa-share" id="share"></i>
-            </div>
-            <div class="post">
-              <div class="poto"></div><label id="person">Ayushi Rawat</label><br>
-              <label id="date">17 Aug at 05:26 pm</label>
-              <div class="area1"></div>
-              <i class="fa fa-thumbs-up" id="like"></i>
-              <i class="fa fa-comments" id="comment"></i>
-              <i class="fa fa-share" id="share"></i>
-            </div>
-            <div class="post">
-              <div class="poto"></div><label id="person">Megha Singh</label><br>
-              <label id="date">17 Aug at 05:26 pm</label>
-              <div class="area2"></div>
-              <i class="fa fa-thumbs-up" id="like"></i>
-              <i class="fa fa-comments" id="comment"></i>
-              <i class="fa fa-share" id="share"></i>
-            </div>
-            <div class="post">
-              <div class="poto"></div><label id="person">Pooja Yadav</label><br>
-              <label id="date">17 Aug at 05:26 pm</label>
-              <div class="area3"></div>
-              <i class="fa fa-thumbs-up" id="like"></i>
-              <i class="fa fa-comments" id="comment"></i>
-              <i class="fa fa-share" id="share"></i>
+            <div class="compose">
+                <?php echo form_open_multipart(base_url().'newsfeed/upload_file');?>
+                  <input type="text" name="file_name" placeholder="what's on your mind?" id="mind">
+                  <input type="file" name="myfile" value=""/ id="choose">
+                  <button type="submit" class="btn btn-info" id="up">Post</button>
+                </form>
             </div>
           </div>
+          <div class="row">
+             <?php if ($posts) { 
+              foreach ($posts as $key => $pvalue) {  ?>
+              <div class="post">
+                  <div class="poto"></div>
+                  <label id="person">
+                    <?php echo "<tr>".$pvalue['name']."</tr>" ?>
+                  </label><br>
+                  <label id="date">
+                    <?php echo "<tr>".$pvalue['upload_time']."</tr>" ?>
+                  </label>
+                <div class="area">
+                  <label><?php echo $pvalue['image_name']; ?></label><br>
+                  <img src="<?php echo base_url().$pvalue['path'].'/'.$pvalue['file_name']; ?>" style="height: 35vh; width: 80%;">
+                </div> 
+               <!-- <div id="like-div">
+                  <button type="button" id="like-btn" onclick="like_post('<?php echo $pvalue['image_id']; ?>')"><i class="fa fa-thumbs-up" id="like"></i></button>
+                  <button id="comment-btn"><i class="fa fa-comments" id="comment"></i></button>
+                </div>-->
+          </div>
+           <div></div>
+          
+             <?php }} ?>
+              </div> 
+          </div> 
         </div>
       </div>
     </div>
     </div>
+  </div>
+
+  <script type="text/javascript" src="<?php echo base_url(); ?>/js/like.js"></script>

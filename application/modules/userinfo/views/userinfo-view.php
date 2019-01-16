@@ -1,16 +1,15 @@
 <div class="cover_pic">
       <div class="div">
       <div class="dp"></div>
-      <label id="user_name"><a href="profile.html" id="user_name_color">Abhay Gupta</a></label>
+      <label id="user_name"><a href="profile.html" id="user_name_color">Anjali Gupta</a></label>
+      <!--<label id="user_name"><a href="profile.html" id="user_name_color"><?php echo "<tr>".$loggedname."</tr>" ?></a></label>-->
       <!-- Static navbar -->
       <nav class="navbar navbar-default" id="nav-2">
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-left">
-              <li class="li"><a href="profile.html"><i class="fa fa-heartbeat" id="icn"></i></a></li>
-              <li class="li"><a href="#"><i class="fa fa-user" id="icn"></i></a></li>
-              <li class="li"><a href="training.html"><i class="fa fa-group" id="icn"></i></a></li>
-              <li class="li"><a href="training.html"><i class="fa fa-image" id="icn"></i></a></li>
-              <li class="li"><a href="training.html"><i class="fa fa-cog" id="icn"></i></a></a></li>
+               <li class="li"><a href="<?php echo base_url(); ?>template/timeline?>"><i class="fa fa-heartbeat" id="icn"></i></a></li>
+              <li class="li"><a href="<?php echo base_url(); ?>template/userinfo?>"><i class="fa fa-user" id="icn"></i></a></li>
+              <li class="li"><a href="<?php echo base_url(); ?>login?>"><i class="fa fa-cog?>" id="icn"></i></a></a></li>
             </ul>
           </div><!--/.nav-collapse -->
       </nav>
@@ -34,7 +33,7 @@
                 </tr>
                 <tr>
                   <td><i class="fa fa-heart" id="a"></i></td>
-                  <td><label class="a">Joined on May 2015</label></td>
+                  <td><label class="a">Joined on </label></td>
                 </tr>
                 <tr>
                   <td><i class="fa fa-plus-square" id="f"></i></td>
@@ -42,12 +41,6 @@
                 </tr>
               </table>
               <center><input type="text" name="links" id="link" placeholder="+ Add instagram, Websites and other links"></center>
-            </div>
-            <div class="photos">
-               <i class="fa fa-image" id="intro"></i><label id="name">Gallery</label><br>
-            </div>
-            <div class="friends">
-              <i class="fa fa-group" id="intro"></i><label id="name">Buddies</label><br>
             </div>
           </div>
         </div>

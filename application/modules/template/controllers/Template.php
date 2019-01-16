@@ -10,9 +10,10 @@ class Template extends MX_Controller{
 		$this->load->view('template-view', $data);
 	}//end of index function
 
-	public function timeline()
+	public function timeline($div_id=0)
 	{
 		$data = array('module_name' => 'timeline');
+		$data['delete_div_id'] = $div_id;
 		$this->load->view('template-view', $data);
 	}//end of timeline function
 

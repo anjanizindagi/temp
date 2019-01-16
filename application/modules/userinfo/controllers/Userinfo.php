@@ -3,13 +3,34 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Userinfo extends MX_Controller{
 
+    function __construct() 
+        {
+            Parent::__construct();
+            $this->load->database();
+            $this->load->helper('form');
+            $this->load->model('Userinfo_model');
+            $this->load->library('session');
+        }
 
 	public function index()
 	{
 		if(isset($this->session->userdata['sessiondata'])){
+         $user_id = $this->session->userdata['sessiondata']['user_id'];
+            $result = $this->Userinfo_model->display_records($user_id);
+            $user_data = $this->Userinfo_model->get_user_info($user_id); 
+            $this->load->model('Userinfo_model');
+            $result['info'] = $user_data;
+            $loggedname = $this->Userinfo_model->display_records($user_id);
+        $all_data = array(
+                'data'              => $result,
+                //'images'            =>  $images,
+                'info'              =>  $user_data,
+                'loggedname'        =>  $loggedname['name'],
+                //'posts'             =>  $posts
+            );
 		$this->load->view('userinfo-view');
 	}else{
-		redirect(base_url().'login');
+		redirect(base_url()."template/userinfo");
 		}
 		
 	}//end of index function 

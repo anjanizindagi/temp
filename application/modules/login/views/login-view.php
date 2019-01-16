@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/login.css">
 	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 	<script type="text/javascript" src="<?php echo base_url(); ?>js/login.js"></script>
+  <script type="text/javascript" src="<?php echo base_url(); ?>js/validation.js"></script>
 </head>
 <body background="<?php echo base_url(); ?>images/human.jpg">
 	<div class="wrapper">
@@ -29,7 +30,7 @@
       </form>
       
       <a href="www.facebook.com"><button id="facebook">Login with Facebook</button></a><br>
-      <a href="www.gmail.com"><button id="gmail">Login with Gmail</button></a><br>
+      <a href="<?php echo base_url(); ?>login/google"><button id="gmail">Login with Gmail</button></a><br>
 		</div>
 		<div id="signupform">
 			<h1>SIGN UP</h1>

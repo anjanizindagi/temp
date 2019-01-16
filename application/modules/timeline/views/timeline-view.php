@@ -1,20 +1,20 @@
-<!---<?php
- // header("Location:timeline-view.php?id=" . $_SESSION['user_id']);
-?>-->
+ <script type="text/javascript">
+   var base_url = '<?php echo base_url(); ?>';
+</script> 
 <div class="cover_pic">
-  <button id="add">ADD FRIEND</button>
       <div class="div">
-      <div class="dp"></div>
-     <label id="user_name"><a href="profile.html" id="user_name_color"><?php echo "<tr>".$data['name']."</tr>" ?></a></label>
+      <div class="dp" id="profile_pic">
+        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Edit</button>
+        
+      </div>
+     <label id="user_name"><a href="profile.html" id="user_name_color"><?php echo "<tr>".$loggedname."</tr>" ?></a></label>
       <!-- Static navbar -->
       <nav class="navbar navbar-default" id="nav-2">
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-left">
-              <li class="li"><a href="profile.html"><i class="fa fa-heartbeat" id="icn"></i></a></li>
-              <li class="li"><a href="about.html"><i class="fa fa-user" id="icn"></i></a></li>
-              <li class="li"><a href="training.html"><i class="fa fa-group" id="icn"></i></a></li>
-              <li class="li"><a href="training.html"><i class="fa fa-image" id="icn"></i></a></li>
-              <li class="li"><a href="training.html"><i class="fa fa-cog" id="icn"></i></a></a></li>
+              <li class="li"><a href="<?php echo base_url(); ?>template/timeline?>"><i class="fa fa-heartbeat" id="icn"></i></a></li>
+              <li class="li"><a href="<?php echo base_url(); ?>template/userinfo?>"><i class="fa fa-user" id="icn"></i></a></li>
+              <li class="li"><a href="<?php echo base_url(); ?>login?>"><i class="fa fa-cog?>" id="icn"></i></a></a></li>
             </ul>
           </div><!--/.nav-collapse -->
       </nav>
@@ -26,72 +26,84 @@
               <table>
                 <tr>
                   <td><i class="fa fa-briefcase" id="a"></i></td>
-                  <td><label class="a">student</label></td>
+                  <td><label class="a"><?php echo $info['working_profile'] ?></label></td>
                 </tr>
                 <tr>
                   <td><i class="fa fa-briefcase" id="a"></i></td>
-                  <td><label class="a">Work at Not Yet Working Still Studying</label></td>
+                  <td><label class="a"><?php echo $info['college'] ?></label></td>
                 </tr>
                 <tr>
                   <td><i class="fa fa-graduation-cap" id="a"></i></td>
-                  <td><label class="a">Went to Nav Jeevan Mission School</label></td>
+                  <td><label class="a"><?php echo $info['highschool'] ?></label></td>
                 </tr>
                 <tr>
                   <td><i class="fa fa-heart" id="a"></i></td>
-                  <td><label class="a">Joined on May 2015</label></td>
-                </tr>
-                <tr>
-                  <td><i class="fa fa-plus-square" id="f"></i></td>
-                  <td><a href="<?php echo base_url(); ?>template/userinfo" id="e">Add features</a></td>
+                  <td><label class="a">Joined on <?php echo $data['created_date'] ?></label></td>
                 </tr>
               </table>
               <center><input type="text" name="links" id="link" placeholder="+ Add instagram, Websites and other links"></center>
-            </div>
-            <div class="photos">
-               <i class="fa fa-image" id="intro"></i><label id="name">Gallery</label><br>
-            </div>
-            <div class="friends">
-              <i class="fa fa-group" id="intro"></i><label id="name">Buddies</label><br>
             </div>
           </div>
         </div>
         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
           <div class="row">
-            <div class="compose"></div>
-            <div class="post">
-              <div class="poto"></div><label id="person">Pooja Yadav</label><br>
-              <label id="date">17 Aug at 05:26 pm</label>
-              <div class="area"></div>
-              <i class="fa fa-thumbs-up" id="like"></i>
-              <i class="fa fa-comments" id="comment"></i>
-              <i class="fa fa-share" id="share"></i>
-            </div>
-            <div class="post">
-              <div class="poto"></div><label id="person">Pooja Yadav</label><br>
-              <label id="date">17 Aug at 05:26 pm</label>
-              <div class="area1"></div>
-              <i class="fa fa-thumbs-up" id="like"></i>
-              <i class="fa fa-comments" id="comment"></i>
-              <i class="fa fa-share" id="share"></i>
-            </div>
-            <div class="post">
-              <div class="poto"></div><label id="person">Pooja Yadav</label><br>
-              <label id="date">17 Aug at 05:26 pm</label>
-              <div class="area2"></div>
-              <i class="fa fa-thumbs-up" id="like"></i>
-              <i class="fa fa-comments" id="comment"></i>
-              <i class="fa fa-share" id="share"></i>
-            </div>
-            <div class="post">
-              <div class="poto"></div><label id="person">Pooja Yadav</label><br>
-              <label id="date">17 Aug at 05:26 pm</label>
-              <div class="area3"></div>
-              <i class="fa fa-thumbs-up" id="like"></i>
-              <i class="fa fa-comments" id="comment"></i>
-              <i class="fa fa-share" id="share"></i>
-            </div>
+             <?php if ($userposts) { 
+              foreach ($userposts as $key => $pvalue) {  ?>
+              <div class="post" id="image_div_id_<?php echo $key; ?>">
+                  <div class="poto"></div>
+                  <label id="person">
+                    <?php echo "<tr>".$loggedname."</tr>" ?>
+                  </label><br>
+                  <label id="date">17 Aug at 05:26 pm</label>
+                  <form method="post" action="<?php echo base_url(); ?>timeline/delete_img/<?php echo $key; ?>">
+                    <input type="hidden" name="del_id" value="<?php echo $pvalue['image_id']; ?> ">
+                    <button type="post" class="btn btn-danger" id="danger">DELETE</button>
+                  </form>
+                <div id="area">
+                  <label><?php echo $pvalue['image_name']; ?></label><br>
+                  <img src="<?php echo base_url().$pvalue['path'].'/'.$pvalue['file_name']; ?>" style="height: 35vh; width: 70%;">
+                </div> 
           </div>
+           
+             <?php }} ?>
+              </div> 
+          </div> 
         </div>
       </div>
     </div>
     </div>
+  </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+       
+        <div class="modal-body">
+           <form id="profile_form">
+          <input type="file" name="myfile">
+           </form>
+        </div>
+     
+        <div class="modal-footer">
+
+          <button type="button" name="submit" id="submit_profile" class="">Upload</button> 
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+ 
+
+
+        
+    <script type="text/javascript" src="<?php echo base_url(); ?>js/timeline.js"></script>  

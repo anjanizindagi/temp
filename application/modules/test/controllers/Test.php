@@ -2,9 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Test extends MX_Controller {
-
-	
-	public function index()
+    public function index()
 	{
 		$this->load->view('test-view');
 	}
@@ -12,20 +10,26 @@ class Test extends MX_Controller {
 	{
 		
 				$this->load->model('test_model');
+                $this->load->helper('string');
                 $input = urldecode(file_get_contents('php://input'));
 
 
 
                 $received = json_decode($input, true);
 
+                $user_info_id = $received[user_info_id]
+
                  //var_dump($received);exit();
 
                 $data = array();
 
-                foreach( $received as $value)
+                foreach($received as $value)
                 {
                     $data[$value['name']] = $value['value'];
-                }
+                    $user_id = $this->session->userdata['sessiondata']['user_id'];
+                    //$result['data']=$this->test_model->display_record($user_id);
+                    $user_info_id= $this->test_model->display_records($user_info_id);
+                }         
 
                
                
@@ -33,7 +37,10 @@ class Test extends MX_Controller {
 
                 $modal_data = array(
 
-                    'name'          =>  $data['name'],
+                    'id'                    =>  uniqid(),
+                    'user_info_id'          =>  $user_info_id_array['user_info_id'],
+                    'user_id'               =>  $user_id,
+                    'name'                  =>  $data['name']
                     //'phone'         =>  $data['mobile'],
                     //'date_time'     =>  date('Y-m-d')
                 );
@@ -55,10 +62,4 @@ class Test extends MX_Controller {
                 ->_display();
                 exit;
 	}//end of function form data
-	function search_form_data
-	
-
 }
-
-
-

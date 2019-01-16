@@ -198,44 +198,22 @@ nav.black ul li a{
 #date{
 	margin-left: 120px;
 	color: black;
-}
-.area{
-	height: 50%;
+}.area{
+	height: 40vh;
 	width: 80%;
 	margin-left: 10%;
-	background: #fff url('../images/personal.jpg');
 	margin-top: 20px;
 	background-size: cover;
+}
+#area{
+	margin-left: 10%;
+	margin-top: 20px;
 }
 #like,#comment,#share{
 	color: black;
 	font-size: 30px;
 	margin-left: 50px;
 	margin-top: 20px;
-}
-.area1{
-	height: 50%;
-	width: 80%;
-	margin-left: 10%;
-	background: #fff url('../images/personal.jpg');
-	margin-top: 20px;
-	background-size: cover;
-}
-.area2{
-	height: 50%;
-	width: 80%;
-	margin-left: 10%;
-	background: #fff url('../images/personal.jpg');
-	margin-top: 20px;
-	background-size: cover;
-}
-.area3{
-	height: 50%;
-	width: 80%;
-	margin-left: 10%;
-	background: #fff url('../images/personal.jpg');
-	margin-top: 20px;
-	background-size: cover;
 }
 #person{
 	color: #0C396B;	
@@ -299,4 +277,35 @@ nav.black ul li a{
 #add{
 	position: absolute;
 	z-index: 1000;
+}
+.col-lg-4{
+	position: fixed;
+}
+#up{
+	height: 35px;
+	width: 130px;
+	background: #0C396B;
+	font-family: monospace;
+	font-size: 16px;
+	color: white;
+	border: none;
+	outline: none;
+	margin-top: -25px;
+	margin-left: 75%;
+}
+#mind{
+	height: 10vh;
+	width: 60%;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+#choose{
+	margin-top: 20px;
+	margin-left: 20px;
+}
+#danger{
+	position: absolute;
+	z-index: 50;
+	margin-left: 80%;
+	margin-top: -10vh;
 }
